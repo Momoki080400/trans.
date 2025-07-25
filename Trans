@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Transmigrasi Nasional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-blue-700 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://placehold.co/50x50" alt="Logo Kementerian Desa PDTT lingkaran dengan warna biru dan ikon rumah modern" class="rounded-full">
+                <div>
+                    <h1 class="text-xl font-bold">SITRANAS</h1>
+                    <p class="text-xs text-blue-200">Sistem Informasi Transmigrasi Nasional</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="font-medium hover:text-blue-200">Beranda</a>
+                <a href="#" class="font-medium hover:text-blue-200">Data Transmigran</a>
+                <a href="#" class="font-medium hover:text-blue-200">Lokasi</a>
+                <a href="#" class="font-medium hover:text-blue-200">Pelaporan</a>
+                <a href="#" class="font-medium hover:text-blue-200">Pengaduan</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Dashboard Header -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800">Dashboard Transmigrasi</h2>
+                <p class="text-gray-600">Monitor semua aktivitas transmigrasi secara real-time</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex space-x-3">
+                <select class="bg-white border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>Semua Provinsi</option>
+                    <option>Jawa Barat</option>
+                    <option>Sumatera Selatan</option>
+                    <option>Kalimantan Tengah</option>
+                </select>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                    Filter
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="stat-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <h3 class="text-sm font-medium text-gray-500 mb-1">Total Transmigran</h3>
+                <p class="text-2xl font-bold text-gray-800">12,456</p>
+                <p class="text-xs text-green-600 mt-2">+ 234 bulan ini</p>
+            </div>
+            <div class="stat-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <h3 class="text-sm font-medium text-gray-500 mb-1">Lokasi Transmigrasi</h3>
+                <p class="text-2xl font-bold text-gray-800">78</p>
+                <p class="text-xs text-blue-600 mt-2">5 lokasi baru</p>
+            </div>
+            <div class="stat-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-yellow-500">
+                <h3 class="text-sm font-medium text-gray-500 mb-1">Pengaduan</h3>
+                <p class="text-2xl font-bold text-gray-800">156</p>
+                <p class="text-xs text-yellow-600 mt-2">12 belum diproses</p>
+            </div>
+            <div class="stat-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500">
+                <h3 class="text-sm font-medium text-gray-500 mb-1">Keluarga Sejahtera</h3>
+                <p class="text-2xl font-bold text-gray-800">82%</p>
+                <p class="text-xs text-purple-600 mt-2">+5% dari tahun lalu</p>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="mb-8">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Aksi Cepat</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <a href="#" class="dashboard-card bg-white p-4 rounded-lg shadow-sm text-center hover:bg-gray-50">
+                    <div class="bg-blue-100 p-3 rounded-full inline-block mb-2">
+                        <img src="https://placehold.co/24x24" alt="Ikon formulir pendaftaran dengan simbol dokumen dan pena" class="w-6 h-6 mx-auto">
+                    </div>
+                    <p class="text-sm font-medium">Pendaftaran</p>
+                </a>
+                <a href="#" class="dashboard-card bg-white p-4 rounded-lg shadow-sm text-center hover:bg-gray-50">
+                    <div class="bg-green-100 p-3 rounded-full inline-block mb-2">
+                        <img src="https://placehold.co/24x24" alt="Ikon pelaporan dengan simbol megaphone dan dokumen" class="w-6 h-6 mx-auto">
+                    </div>
+                    <p class="text-sm font-medium">Laporan</p>
+                </a>
+                <a href="#" class="dashboard-card bg-white p-4 rounded-lg shadow-sm text-center hover:bg-gray-50">
+                    <div class="bg-yellow-100 p-3 rounded-full inline-block mb-2">
+                        <img src="https://placehold.co/24x24" alt="Ikon pengaduan dengan simbol tanda seru dalam lingkaran" class="w-6 h-6 mx-auto">
+                    </div>
+                    <p class="text-sm font-medium">Pengaduan</p>
+                </a>
+                <a href="#" class="dashboard-card bg-white p-4 rounded-lg shadow-sm text-center hover:bg-gray-50">
+                    <div class="bg-purple-100 p-3 rounded-full inline-block mb-2">
+                        <img src="https://placehold.co/24x24" alt="Ikon dokumen dengan simbol kertas dan folder" class="w-6 h-6 mx-auto">
+                    </div>
+                    <p class="text-sm font-medium">Dokumen</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Recent Activities and Map -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Recent Activities -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Aktivitas Terkini</h3>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-800">Lihat Semua</a>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex pb-4 border-b border-gray-100">
+                        <div class="mr-4">
+                            <div class="bg-green-100 p-2 rounded-full">
+                                <img src="https://placehold.co/20x20" alt="Ikon checklist hijau untuk penerimaan" class="w-5 h-5">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-800">120 keluarga diterima di Kalimantan Tengah</p>
+                            <p class="text-xs text-gray-500">2 jam yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="flex pb-4 border-b border-gray-100">
+                        <div class="mr-4">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <img src="https://placehold.co/20x20" alt="Ikon dokumen biru untuk laporan" class="w-5 h-5">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-800">Laporan perkembangan lokasi transmigrasi Sumatera Selatan</p>
+                            <p class="text-xs text-gray-500">Kemarin</p>
+                        </div>
+                    </div>
+                    <div class="flex pb-4 border-b border-gray-100">
+                        <div class="mr-4">
+                            <div class="bg-yellow-100 p-2 rounded-full">
+                                <img src="https://placehold.co/20x20" alt="Ikon tanda seru kuning untuk pengaduan" class="w-5 h-5">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-800">5 pengaduan baru masuk</p>
+                            <p class="text-xs text-gray-500">2 hari yang lalu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Persebaran Transmigran</h3>
+                <div class="bg-gray-100 rounded-lg h-64 flex items-center justify-center">
+                    <img src="https://placehold.co/600x300" alt="Peta Indonesia dengan highlight daerah-daerah transmigrasi dan ikon lokasi" class="w-full h-full object-contain">
+                </div>
+                <div class="mt-4 grid grid-cols-2 gap-2">
+                    <div class="text-center bg-blue-50 py-2 rounded">
+                        <p class="text-xs text-gray-500">Pulau Jawa</p>
+                        <p class="font-bold text-blue-700">4,210</p>
+                    </div>
+                    <div class="text-center bg-green-50 py-2 rounded">
+                        <p class="text-xs text-gray-500">Sumatera</p>
+                        <p class="font-bold text-green-700">3,456</p>
+                    </div>
+                    <div class="text-center bg-yellow-50 py-2 rounded">
+                        <p class="text-xs text-gray-500">Kalimantan</p>
+                        <p class="font-bold text-yellow-700">2,890</p>
+                    </div>
+                    <div class="text-center bg-purple-50 py-2 rounded">
+                        <p class="text-xs text-gray-500">Sulawesi</p>
+                        <p class="font-bold text-purple-700">1,900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Table -->
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
+            <div class="p-6 pb-0">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Data Transmigran Terbaru</h3>
+                    <button class="text-sm text-white bg-blue-600 px-3 py-1 rounded hover:bg-blue-700">
+                        Ekspor Data
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Asal</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tujuan</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tanggal</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">TRX-02841</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img src="https://placehold.co/40x40" alt="Potret keluarga transmigran" class="h-10 w-10 rounded-full">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Keluarga Surya</div>
+                                            <div class="text-sm text-gray-500">4 anggota</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jawa Tengah</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Kalimantan Tengah</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">15 Mei 2023</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">TRX-02840</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img src="https://placehold.co/40x40" alt="Potret keluarga transmigran" class="h-10 w-10 rounded-full">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Keluarga Wijaya</div>
+                                            <div class="text-sm text-gray-500">5 anggota</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jawa Timur</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sulawesi Tenggara</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sumatera Selatan</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10 Mei 2023</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Aktif</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">TRX-02839</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img src="https://placehold.co/40x40" alt="Potret keluarga transmigran" class="h-10 w-10 rounded-full">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">Keluarga Darmawan</div>
+                                            <div class="text-sm text-gray-500">3 anggota</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jawa Barat</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Sulawesi Tengah</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5 Mei 2023</td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Proses</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-6 py-3 flex items-center justify-between border-t border-gray-200">
+                <div class="flex-1 flex justify-between sm:hidden">
+                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Sebelumnya</a>
+                    <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Selanjutnya</a>
+                </div>
+                <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                    <div>
+                        <p class="text-sm text-gray-700">
+                            Menampilkan
+                            <span class="font-medium">1</span>
+                            sampai
+                            <span class="font-medium">3</span>
+                            dari
+                            <span class="font-medium">12,456</span>
+                            hasil
+                        </p>
+                    </div>
+                    <div>
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Previous</span>
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Next</span>
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">SITRANAS</h4>
+                    <p class="text-sm text-gray-400">Sistem informasi terintegrasi untuk mendukung program transmigrasi nasional secara efektif dan transparan.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white">Panduan</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white">Formulir</a></li>
+                        <li><a href="#" class="text-sm text-gray-400 hover:text-white">Peraturan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="text-sm text-gray-400">Email: info@sitranas.go.id</li>
+                        <li class="text-sm text-gray-400">Telp: (021) 12345678</li>
+                        <li class="text-sm text-gray-400">Alamat: Jl. Transmigrasi No. 1 Jakarta</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Sosial Media</h4>
+                    <div class="flex space-x-4">
+                        <a href="#">
+                            <img src="https://placehold.co/24x24" alt="Logo Facebook warna putih dalam lingkaran biru" class="w-6 h-6">
+                        </a>
+                        <a href="#">
+                            <img src="https://placehold.co/24x24" alt="Logo Twitter warna putih dalam lingkaran biru" class="w-6 h-6">
+                        </a>
+                        <a href="#">
+                            <img src="https://placehold.co/24x24" alt="Logo Instagram warna putih dalam lingkaran ungu" class="w-6 h-6">
+                        </a>
+                        <a href="#">
+                            <img src="https://placehold.co/24x24" alt="Logo YouTube warna putih dalam lingkaran merah" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400">
+                <p>© 2023 Sistem Informasi Transmigrasi Nasional. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('header button');
+            const navMenu = document.querySelector('nav');
+            
+            if(mobileMenuButton && navMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    navMenu.classList.toggle('hidden');
+                    navMenu.classList.toggle('flex');
+                    navMenu.classList.toggle('flex-col');
+                    navMenu.classList.toggle('absolute');
+                    navMenu.classList.toggle('top-16');
+                    navMenu.classList.toggle('right-0');
+                    navMenu.classList.toggle('bg-blue-700');
+                    navMenu.classList.toggle('p-4');
+                    navMenu.classList.toggle('shadow-lg');
+                });
+            }
+            
+            // Basic form validation for search
+            const searchForm = document.querySelector('form');
+            if(searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    const searchInput = this.querySelector('input[type="search"]');
+                    if(searchInput && searchInput.value.trim() === '') {
+                        e.preventDefault();
+                        searchInput.focus();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
